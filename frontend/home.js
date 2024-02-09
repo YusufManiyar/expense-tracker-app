@@ -40,7 +40,6 @@ if(localStorage.getItem('userid') !== null){
                 <button class="edit-btn">Edit</button>
                 <button class="delete-btn">Delete</button>
             `;
-            console.log(expense.amount, typeof expense.amount)
             updateTotalExpense(expense.amount)
             expenseList.appendChild(li);
         }
@@ -62,13 +61,14 @@ if(localStorage.getItem('userid') !== null){
         }
     
         function loadExpenses() {
-            fetch('http://localhost:4000/expense', {method: 'GET', headers: {
+            const userid = localStorage.getItem('userid')
+            fetch(`http://localhost:4000/expense?userid=${userid}`, {method: 'GET', headers: {
                 'Content-Type': 'application/json'
               },
             }).then(resp => resp.json())
-            .then(data => data.forEach(data => {
+            .then(data => data && data.forEach(data => {
+                console.log(data)
                 addExpense({id: data.id, description: data.description, amount: data.amount});
-                // updateTotalExpense(data.amount);
             }))
         }
     

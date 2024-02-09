@@ -3,7 +3,12 @@ const Expense = require('../model/expense.js')
 module.exports = {
     fetch : async (req, res) => {
         try {
-            const expenses = await Expense.findAll();
+            const { userid } = req.query;
+            const expenses = await Expense.findAll({
+                where: {
+                  userId: userid
+                }
+              });
             res.status(200).json(expenses);
         } catch (error) {
             res.status(500).json({ message: error.message });
