@@ -1,0 +1,152 @@
+body {
+    background: rgb(49,203,165);
+    background: linear-gradient(90deg, rgba(49,203,165,1) 6%, rgba(0,255,247,0.49343487394957986) 21%, rgba(22,213,207,0.4234068627450981) 50%, rgba(20,191,186,0.5634628851540616) 62%, rgba(0,0,0,0) 79%);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh;
+    overflow:hidden;
+}
+
+.container {
+    background-color: rgba(247, 242, 242, 0.7);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 450px;
+    margin: auto;
+    height: 80vh;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    position:sticky;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="number"] {
+    width: calc(100% - 6px);
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h2 {
+    position: sticky;
+    top: 10px;
+}
+
+#expense-list {
+    position: static;
+    height: 90%;
+    overflow: scroll;
+}
+
+hr.divider {
+    border: none;
+    height: 2px; /* Adjust the height of the divider */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)); /* Add a gradient for the shadow effect */
+    margin: 0;
+}
+
+
+#expenses {
+    margin-top: 20px;
+    height: 55%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span {
+    max-width: 10px;
+}
+
+.delete-btn,
+.edit-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+.edit-btn {
+    background-color: #3498db;
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
+    background-color: #c0392b;
+}
+
+#form-container{
+    position: sticky;
+}
+
+#totalExpense {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#logout-button {
+    margin: 5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-size: 24px;
+}
+
+.logout {
+    background: transparent;
+}
